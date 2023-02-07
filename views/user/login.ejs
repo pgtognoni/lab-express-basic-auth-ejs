@@ -1,0 +1,13 @@
+<h1>LogIn</h1>
+<form method="POST" action="/auth/login">
+    <label for="username"> Username: 
+        <input type="text" name="username" value="<% if (typeof err != 'undefined') { %><%= body.username %><% } %>" required>
+    </label>    
+    <label for="password"> Password: 
+        <input type="password" name="password" id="" required>
+    </label> 
+    <button type="submit">Login</button> 
+    <% if (typeof err !== 'undefined') { %>
+     <p style="color: red"><%= err %> </p>
+    <% } %>
+</form>

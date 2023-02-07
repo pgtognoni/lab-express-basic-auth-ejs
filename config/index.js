@@ -35,6 +35,7 @@ module.exports = app => {
   // Sets the view engine to EJS
   app.set('view engine', 'ejs')
   app.use(expressLayouts)
+  app.set('view options', { layout: 'layout.ejs' })
   // Handles access to the public folder
   app.use(express.static(path.join(__dirname, '..', 'public')))
 
